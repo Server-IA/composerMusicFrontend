@@ -61,7 +61,7 @@ export default function AdminLayout({ children }: Props) {
           >
             {!!open ? (
               <Image
-                src="/img/logo-classic.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/img/logo-classic.png`}
                 alt="Logo"
                 priority={true}
                 width={220}
