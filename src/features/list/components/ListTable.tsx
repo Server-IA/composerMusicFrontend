@@ -200,7 +200,7 @@ export default function ListsTable({ Lists, loading, getLists, isFiltered }: Pro
   return (
     <>
       <Dialog open={open} onClose={close} fullWidth maxWidth="md">
-        <form noValidate onSubmit={() => {}}>
+        <form noValidate onSubmit={() => { }}>
           <DialogTitle></DialogTitle>
           <DialogContent>
             <Grid
@@ -212,11 +212,9 @@ export default function ListsTable({ Lists, loading, getLists, isFiltered }: Pro
               }}
             >
               <iframe
-                style={{
-                  width: "100%",
-                }}
-                src={"https://midi-player-one.vercel.app?mid=" + mid}
-              ></iframe>
+                style={{ width: "100%" }}
+                src={"http://127.0.0.1:8080?mid=" + mid}
+              />
             </Grid>
           </DialogContent>
           <DialogActions>

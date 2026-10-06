@@ -29,7 +29,7 @@ import { AppStore } from "@/redux/store";
 import useGetTranscriptList from "@/features/transcript/hooks/useGetTrasncriptsList";
 import { Daum } from "@/features/transcript/models/transcript.models";
 import { usePDF } from 'react-to-pdf';
-const urlMidiEditor = 'https://midi-player-one.vercel.app/speech.html';
+const urlMidiEditor = 'http://localhost:8080/speech.html';
 export default function TranscriptPage() {
   const dispatcher = useDispatch();
   const [loading, setLoading] = useState(false);
