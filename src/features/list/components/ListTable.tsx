@@ -213,7 +213,7 @@ export default function ListsTable({ Lists, loading, getLists, isFiltered }: Pro
             >
               <iframe
                 style={{ width: "100%" }}
-                src={`${URL_PLAYER}?mid=${mid}`}
+                src={`${URL_PLAYER}/?mid=${mid}`}
               />
             </Grid>
           </DialogContent>

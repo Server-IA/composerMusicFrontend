@@ -23,13 +23,13 @@ import { MUIDataTableDefaultOptions } from "@/constants/muidatatable.constants";
 import { Container } from "@mui/system";
 import { Download } from "@mui/icons-material";
 import { LoadingButton } from "@mui/lab";
-import { URL_API_BASE } from "@/constants/url-apis.constants";
+import { URL_API_BASE, URL_PLAYER } from "@/constants/url-apis.constants";
 import axios from "axios";
 import { AppStore } from "@/redux/store";
 import useGetTranscriptList from "@/features/transcript/hooks/useGetTrasncriptsList";
 import { Daum } from "@/features/transcript/models/transcript.models";
 import { usePDF } from 'react-to-pdf';
-const urlMidiEditor = 'http://localhost:8080/speech.html';
+const urlMidiEditor = `${URL_PLAYER}/speech.html`;
 export default function TranscriptPage() {
   const dispatcher = useDispatch();
   const [loading, setLoading] = useState(false);
