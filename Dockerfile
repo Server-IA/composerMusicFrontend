@@ -13,12 +13,8 @@ FROM node:18-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# URLs del backend que usará el navegador (se incrustan en la compilación)
-ARG NEXT_PUBLIC_BASE_URL_BACKEND=http://127.0.0.1:5000
-ARG NEXT_PUBLIC_BASE_URL_BACKEND_GEN=http://127.0.0.1:5000
-ENV NEXT_PUBLIC_BASE_URL_BACKEND=$NEXT_PUBLIC_BASE_URL_BACKEND \
-    NEXT_PUBLIC_BASE_URL_BACKEND_GEN=$NEXT_PUBLIC_BASE_URL_BACKEND_GEN \
-    NEXT_TELEMETRY_DISABLED=1
+# Las URLs del backend y del player se toman del archivo .env (se incrustan en la compilación)
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN yarn build
 
 # 3) Imagen final de ejecución

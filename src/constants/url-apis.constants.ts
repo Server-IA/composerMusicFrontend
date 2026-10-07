@@ -1,5 +1,6 @@
 export const URL_API_BASE = process.env.NEXT_PUBLIC_BASE_URL_BACKEND;
 export const URL_API_BASE_GEN = process.env.NEXT_PUBLIC_BASE_URL_BACKEND_GEN;
+export const URL_PLAYER = process.env.NEXT_PUBLIC_URL_PLAYER;
 export const URL_API_LOGIN = `${URL_API_BASE}/auth/login`;
 export const URL_API_REGISTER = `${URL_API_BASE}/register`;
 export const URL_API_PRODUCTS = `${URL_API_BASE}/products`;

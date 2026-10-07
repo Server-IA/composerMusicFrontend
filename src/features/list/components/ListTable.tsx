@@ -26,7 +26,7 @@ declare global {
   }
 }
 import * as base64 from "base64-js";
-import { URL_API_BASE } from "@/constants/url-apis.constants";
+import { URL_API_BASE, URL_PLAYER } from "@/constants/url-apis.constants";
 import * as Tone from "tone";
 import { LoadingButton } from "@mui/lab";
 import usePutList from "../hooks/usePutList";
@@ -213,7 +213,7 @@ export default function ListsTable({ Lists, loading, getLists, isFiltered }: Pro
             >
               <iframe
                 style={{ width: "100%" }}
-                src={"http://127.0.0.1:8080?mid=" + mid}
+                src={`${URL_PLAYER}?mid=${mid}`}
               />
             </Grid>
           </DialogContent>
